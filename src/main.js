@@ -1,4 +1,7 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router'; // ✅ Sigurohu që router është importuar vetëm një herë
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.use(router); // ✅ Përdorim Vue Router
+app.mount('#app');
